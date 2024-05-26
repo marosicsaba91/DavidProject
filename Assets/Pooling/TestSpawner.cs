@@ -24,7 +24,7 @@ public class TestSpawner : MonoBehaviour
         Vector3 pos = GetRandomPoint(spawnArea);
         Quaternion rot = GetRandomRotation(); 
 
-        GameObject newGo = Pool.instance.Pop(spawnable);
+        GameObject newGo = Pool.Pop(spawnable);
 
         newGo.transform.parent = transform;
         newGo.transform.SetPositionAndRotation(pos, rot);

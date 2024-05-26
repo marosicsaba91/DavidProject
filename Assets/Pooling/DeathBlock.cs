@@ -5,7 +5,7 @@ public class DeathBlock : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out Poolable p))
-            Pool.instance.Push(p);
+            Pool.Push(p);
         else
             Destroy(other.gameObject);
     }
